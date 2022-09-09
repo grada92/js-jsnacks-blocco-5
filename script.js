@@ -76,3 +76,79 @@ console.log(footballTeams);
 
 // SNACK 2
 
+// SNACK 3
+
+const zucchine = [
+    {
+        peso: 10,
+        misura: 15
+    },
+
+    {
+        peso: 20,
+        misura: 5
+    },
+
+    {
+        peso: 60,
+        misura: 20
+    },
+
+    {
+        peso: 90,
+        misura: 6
+    },
+
+    {
+        peso: 10,
+        misura: 23
+    },
+
+    {
+        peso: 35,
+        misura: 15
+    },
+
+    {
+        peso: 4,
+        misura: 16
+    },
+
+    {
+        peso: 12,
+        misura: 20
+    },
+
+    {
+        peso: 55,
+        misura: 20
+    },
+
+    {
+        peso: 45,
+        misura: 10
+    },
+]
+
+// Divido in due array separati 
+let corte = [];
+let lunghe = [];
+
+let pesoLunghe = 0;
+let pesoCorte = 0;
+
+zucchine.forEach((key, index) => {
+    if (key.misura >= 15) {
+        lunghe.push(key)
+        pesoLunghe += key.peso;
+    }
+    else {
+        corte.push(key);
+        pesoCorte += key.peso;
+    }
+
+
+})
+
+// stampo separatamente in due gruppi
+console.log("peso corte : "+ pesoCorte , "peso lunghe "+ pesoLunghe)
