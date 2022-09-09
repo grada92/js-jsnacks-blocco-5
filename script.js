@@ -76,6 +76,23 @@ console.log(footballTeams);
 
 // SNACK 2
 
+const numeri = [1 , 34 , 56 , 43 , 67, 98 , 35];
+
+function myFunction(a, b, ...numeri) {
+
+    const nuovoArray = numeri.filter((element, i) => {
+        if(i >= a && i <= b) {
+            return true;
+        }
+    })
+    return nuovoArray;
+}
+
+let number = myFunction(1, 5 , ...numeri)
+console.log(number)
+
+
+
 // SNACK 3
 
 const zucchine = [
